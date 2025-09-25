@@ -1,10 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export default function About() {
+
+export default function About(props) {
   return (
     <div className="container my-4">
       <div className="card shadow-lg border-0 rounded-3">
-        <div className="card-body">
+        <div className="card-body" style={{color: props.mode==="light"?"black":"white",
+          backgroundColor: props.mode==="light"?"white":"#343a40"
+        }}>
           <h3 className="card-title text-center text-primary mb-3">
             About TextUtils
           </h3>
@@ -37,9 +41,9 @@ export default function About() {
           </p>
 
           <div className="text-center mt-3">
-            <a href="/" className="btn btn-primary">
+            <Link to="/" className="btn btn-primary">
               Back to Home
-            </a>
+            </Link>
           </div>
         </div>
       </div>

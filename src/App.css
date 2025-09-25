@@ -1,63 +1,72 @@
-.btns{
-    border: 2px solid #0d6efd;
-    background-color: #0d6efd;
-    color: white;
-    border-radius: 5rem;
-    padding: 0.3rem;
+.btns {
+  border: 2px solid #0d6efd;
+  background-color: #0d6efd;
+  color: white;
+  border-radius: 5rem;
+  padding: 0.3rem;
 }
 
-.buttons{
-    display:flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    text-align: center;
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  text-align: center;
 }
-.clearText{
-    float:inline-end;
-    padding: 5px;
-    margin: 5px;
-    border-radius: 10px;
-    background-color: grey;
-    color: white;
-    border: none;
+
+.btns:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
 }
-.countPara{
-    color: rgb(160, 160, 160);
+.clearText {
+  float: inline-end;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  background-color: grey;
+  color: white;
+  border: none;
 }
-.mynavBar{
-    display: flex !important;
-    margin: auto;
-    flex-wrap: wrap !important;
-    padding: auto;
+.countPara {
+  color: rgb(160, 160, 160);
 }
-.searchButton{
-    background-color: white;
-    /* padding: 0px !important; */
+.mynavBar {
+  display: flex !important;
+  margin: auto;
+  flex-wrap: wrap !important;
+  padding: auto;
 }
-.mode{
-    float: right;
-    border-radius: 10px;
+.searchButton {
+  background-color: white;
+  /* padding: 0px !important; */
 }
-.light{
-    background-color: #dedede !important;
-    color: black !important;
-    transition:2000ms;
+.mode {
+  float: right;
+  border-radius: 10px;
 }
-.dark{
-    background-color:rgb(5, 5, 5) !important;
-    color: white !important;
-    transition:2000ms;
+.light {
+  background-color: #dedede !important;
+  color: black !important;
+  transition: 2000ms;
 }
-.headFont{
-    font-family: "Bungee Spice", sans-serif;
+.dark {
+  background-color: rgb(5, 5, 5) !important;
+  color: white !important;
+  transition: 2000ms;
+}
+.headFont {
+  font-family: "Bungee Spice", sans-serif;
   font-weight: 400;
   font-style: normal;
   margin-left: 1%;
 }
 
-.myAlert{
-    text-align: center !important;
-    background-color: lightgreen;
-    
+.myAlert {
+  text-align: center !important;
+  background-color: lightgreen;
+}
+.myStyleForSubtitle {
+  margin-left: 5vh;
+  padding: 2vh;
+  justify-content: center;
 }

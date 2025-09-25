@@ -10,7 +10,7 @@ export default function TextForm(props) {
   const onChangeHandler = (event) => {
     setText(event.target.value);
     setCount(event.target.value.length);
-    setWCount(event.target.value.split(" ").length);
+    setWCount(event.target.value.split(" ").filter((element)=>{return element.length!==0}).length);
   };
 
   const convertToUpperCase = () => {
@@ -56,7 +56,7 @@ export default function TextForm(props) {
     let newText = text.split(/\s+/).join(" ");
     setText(newText);
     setCount(newText.length);
-    setWCount(newText.split(" ").length);
+    setWCount(newText.split(" ").filter((element)=>{return element.length!==0}).length);
   };
 
   const copyToClipboard = () => {
@@ -76,10 +76,10 @@ export default function TextForm(props) {
           htmlFor="exampleFormControlTextarea1"
           className="form-label"
         ></label>
-        <button className="btns clearText" onClick={copyToClipboard}>
+        <button disabled={text.length===0} className="btns clearText" onClick={copyToClipboard}>
           Copy to clipboard
         </button>
-        <button className="btns clearText" onClick={clearTextArea}>
+        <button disabled={text.length===0} className="btns clearText" onClick={clearTextArea}>
           Clear Text
         </button>
         <textarea
@@ -99,22 +99,22 @@ export default function TextForm(props) {
         <p className="countPara">{} </p>
       </div>
       <div className="buttons">
-        <button className="btns" onClick={convertToUpperCase}>
+        <button disabled={text.length===0} className="btns" onClick={convertToUpperCase}>
           Convert To UpperCase
         </button>
-        <button className="btns" onClick={convertToLowerCase}>
+        <button disabled={text.length===0} className="btns" onClick={convertToLowerCase}>
           Convert To LowerCase
         </button>
-        <button className="btns" onClick={convertToUpperCaseFirstLetter}>
+        <button disabled={text.length===0} className="btns" onClick={convertToUpperCaseFirstLetter}>
           Capital First letter of Each word
         </button>
-        <button
+        <button disabled={text.length===0}
           className="btns"
           onClick={convertToUpperCaseFirstLetterOfSentence}
         >
           Capitalize first letter of each sentences
         </button>
-        <button className="btns" onClick={removeExtraSpaces}>
+        <button disabled={text.length===0} className="btns" onClick={removeExtraSpaces}>
           Remove Extra Spaces
         </button>
       </div>

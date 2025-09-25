@@ -19,29 +19,47 @@ export default function Navbar(props) {
         >
           {props.title}
         </Link>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/About">About Us</Link>
-        </li>
-        </ul>
+        <div
+          className=" navbar-collapse myStyleForSubtitle"
+          id="navbarSupportedContent"
+        >
+          <ul className="navbar-nav ">
+            <li className="nav-item">
+              <Link
+                className={`navbar-brand  ${
+                  props.mode === "light" ? "light" : "dark"
+                } headFont`}
+                aria-current="page"
+                to="/"
+              >
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className={`navbar-brand ${
+                  props.mode === "light" ? "light" : "dark"
+                } headFont`}
+                to="/About"
+              >
+                About Us
+              </Link>
+            </li>
+          </ul>
         </div>
-      <div className="form-check form-switch">
-        <input
-          className="form-check-input"
-          type="checkbox"
-          role="switch"
-          id="switchCheckDefault"
-          onClick={props.toggleMode}
-        />
-        <label
-          className="form-check-label"
-          htmlFor="switchCheckDefault"
-        >{`Enable ${props.mode==="light"?"dark":"light"} mode`}</label>
-      </div>
+        <div className="form-check form-switch">
+          <input
+            className="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="switchCheckDefault"
+            onClick={props.toggleMode}
+          />
+          <label
+            className="form-check-label"
+            htmlFor="switchCheckDefault"
+          >{`Enable ${props.mode === "light" ? "dark" : "light"} mode`}</label>
+        </div>
       </div>
     </nav>
   );

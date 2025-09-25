@@ -3,11 +3,11 @@ import "./App.css";
 import Navbar from "./component/Navbar";
 import TextForm from "./component/TextForm";
 import About from "./component/About";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom"; // ✅ Changed BrowserRouter → HashRouter
 
 function App() {
-  /*Dark Mode*/
-  const [mode, setMode] = useState("light"); //whether dark mode is enabled
+  /* Dark Mode */
+  const [mode, setMode] = useState("light"); // whether dark mode is enabled
 
   const toggleMode = () => {
     if (mode === "light") {
@@ -32,7 +32,7 @@ function App() {
         <div className="container">
           <Routes>
             <Route
-              exact path="/"
+              path="/"
               element={
                 <TextForm
                   heading="Transform your text with ease!"
@@ -40,7 +40,7 @@ function App() {
                 />
               }
             />
-            <Route exact path="/about" element={<About />} />
+            <Route path="/about" element={<About mode={mode} />} />
           </Routes>
         </div>
       </Router>
